@@ -1,31 +1,40 @@
 package com.example.demo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Player {
-String name, position;
 
-public Player() {
-	super();
-}
+	@Id
+	@GeneratedValue
+	Long id;
+	String name, position;
 
-public Player(String name, String position) {
-	this();
-	this.name = name;
-	this.position = position;
-}
+	public Player() {
+		super();
+	}
 
-public String getName() {
-	return name;
-}
+	public Player(String name, String position) {
+		this();
+		this.name = name;
+		this.position = position;
+	}
 
-public void setName(String name) {
-	this.name = name;
-}
+	public String getName() {
+		return name;
+	}
 
-public String getPosition() {
-	return position;
-}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-public void setPosition(String position) {
-	this.position = position;
-}
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
 }
